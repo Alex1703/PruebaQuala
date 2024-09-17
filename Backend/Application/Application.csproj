@@ -1,0 +1,38 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Interfaces\Content\Brands\**" />
+    <Compile Remove="Interfaces\Content\Categories\**" />
+    <Compile Remove="Interfaces\Content\Products\**" />
+    <EmbeddedResource Remove="Interfaces\Content\Brands\**" />
+    <EmbeddedResource Remove="Interfaces\Content\Categories\**" />
+    <EmbeddedResource Remove="Interfaces\Content\Products\**" />
+    <None Remove="Interfaces\Content\Brands\**" />
+    <None Remove="Interfaces\Content\Categories\**" />
+    <None Remove="Interfaces\Content\Products\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Dtos\ProductDto.cs" />
+    <Compile Remove="Dtos\ProductDtoDetails.cs" />
+    <Compile Remove="Dtos\WithDrawProducts.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Http.Features" Version="5.0.17" />
+  </ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\Domain\Domain.csproj" />
+	</ItemGroup>
+
+	
+	
+	
+</Project>
